@@ -1,25 +1,60 @@
 aid: clover-ag
+
 name: Deep Rooted
+
 description: 'Deep Rooted is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by accel) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/clover-ag/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- accel
+
 common:
+- type: LLMsTxt
+  url: llms/clover-ag-llms.txt
+- type: Hosts
+  url: hosts/clover-ag-hosts.yml
+- type: DomainSecurity
+  url: security/clover-ag-domain-security.yml
 - type: Website
   url: http://www.clover.ag/
+
+apis: []
+
+x-backed-by:
+- accel
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: The domain clover.ag redirects to a parked GoDaddy page with no API documentation.
+  evidence:
+    - url: https://www.clover.ag/
+      status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
